@@ -1,9 +1,17 @@
 package com.squishy.pos.models.items
 
-interface OrderableItem {
-    val name: String
-    val description: String
-    val price: Double
-    var available: Boolean
-    val taxable: Boolean
-}
+import javax.persistence.Entity
+import javax.persistence.Id
+import javax.persistence.Table
+
+@Entity
+@Table(name = "items")
+data class OrderableItem(
+        @Id
+        val name: String,
+        val description: String = "",
+        val price: Double,
+        val taxable: Boolean,
+        val available: Boolean,
+        val alcoholic: Boolean
+)
