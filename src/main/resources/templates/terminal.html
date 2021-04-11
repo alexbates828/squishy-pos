@@ -9,72 +9,41 @@
 <body>
 
 <div class="container">
-    <!-- <div class="row">
-        <div class="col">Typed price should go here?</div>
-    </div>
-    <div class="row">
-        <div class="col">7</div>
-        <div class="col">8</div>
-        <div class="col">9</div>
-        <div class="col">Back</div>
-    </div>
-    <div class="row">
-        <div class="col">4</div>
-        <div class="col">5</div>
-        <div class="col">6</div>
-        <div class="col">-</div>
-    </div>
-    <div class="row">
-        <div class="col">1</div>
-        <div class="col">2</div>
-        <div class="col">3</div>
-        <div class="col">?</div>
-    </div>
-    <div class="row">
-        <div class="col">0</div>
-        <div class="col">00</div>
-        <div class="col">.</div>
-        <div class="col">Finish</div>
-    </div>
-    <div class="row">
-        <div class="col">Add</div>
-    </div> -->
-
     <div class="row">
         <div class="col">
-            <input type="text" id="priceDisplay" value="0.00"><br>
+            <input type="number" step=0.01 id="priceDisplay" value="0.00"><br>
         </div>
     </div>
     <div class="row">
         <div class="col">
             <div class="row">
-                <div class="col"><button type="button" class="btn btn-light">7</button></div>
-                <div class="col"><button type="button" class="btn btn-light">8</button></div>
-                <div class="col"><button type="button" class="btn btn-light">9</button></div>
+                <div class="col"><button type="button" class="btn btn-light btn-lg">7</button></div>
+                <div class="col"><button type="button" class="btn btn-light btn-lg">8</button></div>
+                <div class="col"><button type="button" class="btn btn-light btn-lg">9</button></div>
             </div>
             <div class="row">
-                <div class="col"><button type="button" class="btn btn-light">4</button></div>
-                <div class="col"><button type="button" class="btn btn-light">5</button></div>
-                <div class="col"><button type="button" class="btn btn-light">6</button></div>
+                <div class="col"><button type="button" class="btn btn-light btn-lg">4</button></div>
+                <div class="col"><button type="button" class="btn btn-light btn-lg">5</button></div>
+                <div class="col"><button type="button" class="btn btn-light btn-lg">6</button></div>
             </div>
             <div class="row">
-                <div class="col"><button type="button" class="btn btn-light">1</button></div>
-                <div class="col"><button type="button" class="btn btn-light">2</button></div>
-                <div class="col"><button type="button" class="btn btn-light">3</button></div>
+                <div class="col"><button type="button" class="btn btn-light btn-lg">1</button></div>
+                <div class="col"><button type="button" class="btn btn-light btn-lg">2</button></div>
+                <div class="col"><button type="button" class="btn btn-light btn-lg">3</button></div>
             </div>
             <div class="row">
-                <div class="col"><button type="button" class="btn btn-light">0</button></div>
-                <div class="col"><button type="button" class="btn btn-dark">.</button></div>
+                <div class="col"><button type="button" class="btn btn-light btn-block btn-lg">0</button></div>
+                <div class="col"><button type="button" class="btn btn-dark btn-lg">.</button></div>
             </div>
         </div>
         <div class="col">
-            <div class="row"><button type="button" class="btn btn-secondary">Back</button></div>
-            <div class="row"><button type="button" class="btn btn-danger">Subtract</button></div>
-            <div class="row"><button type="button" class="btn btn-success">Finish</button></div>
+            <div class="row"><button type="button" class="btn btn-secondary btn-block">Back</button></div>
+            <div class="row"><button type="button" class="btn btn-danger btn-block" onclick="handleSubtract()">Subtract</button></div>
+            <div class="row"><button type="button" class="btn btn-success btn-block" onclick="handleFinish()">Finish</button></div>
         </div>
     </div>
     <div class="row">
-        <div class="col"><button type="submit" class="btn btn-primary" onclick="handleAdd()">Add</button></div>
+        <div class="col"><button type="submit" class="btn btn-primary btn-block" onclick="handleAdd()">Add</button></div>
     </div>
 </div>
 
